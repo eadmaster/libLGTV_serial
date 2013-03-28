@@ -12,6 +12,8 @@ actual_codes = {}
 common_codes = {
     'aspect43'      : b"kc 00 01",
     'aspect169'     : b"kc 00 02",
+    'aspectorig'    : b"kc 00 06",
+    'aspectjs'      : b"kc 00 09", # JustScan
     'aspectstatus'  : b"kc 00 ff",
     'poweroff'      : b"ka 00 00",
     'poweron'       : b"ka 00 01",

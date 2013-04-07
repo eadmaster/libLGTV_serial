@@ -21,7 +21,11 @@ common_codes = {
     'volumelevel'   : b"kf 00 ff",
     'mute'          : b"ke 00 00",
     'unmute'        : b"ke 00 01",
-    'mutestatus'    : b"ke 00 ff"
+    'mutestatus'    : b"ke 00 ff",
+    'energysavingoff' : b"jq 00 00",
+    'energysavingmin' : b"jq 00 01",
+    'energysavingmed' : b"jq 00 02",
+    'energysavingmax' : b"jq 00 03"
 }
 actual_codes['LK450_etc'] = common_codes.copy()
 actual_codes['LK450_etc'].update({

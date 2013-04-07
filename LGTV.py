@@ -7,17 +7,21 @@ from libLGTV_serial import LGTV
 model = '42LK450'                    # Change this to your TV's model
 
 # Change this to the serial port you're using
-# On Linux it might look like '/dev/ttyS0'
 # On a Mac it might look like '/dev/tty.usbmodemfa2321'
-serial_port = "\\.\COM4"
+import os
+if os.name=="nt":
+    serial_port = "\\.\COM4"
+else:
+	serial_port = "/dev/ttyS0"
+
+tv = LGTV(model, serial_port)
 
 # Verify passed command
 if len(sys.argv) != 2: 
     print('Usage: {0} <command>'.format(sys.argv[0]))
     print('Example: {0} --togglepower'.format(sys.argv[0]))
+    print(tv.available_commands());
     sys.exit(1)
-
-tv = LGTV(model, serial_port)
 
 # Example of adding a custom toggle command. Passing in '--toggleinput'
 # will toggle between 'inputrgbpc' and 'inputdigitalcable'

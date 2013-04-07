@@ -25,7 +25,12 @@ common_codes = {
     'energysavingoff' : b"jq 00 00",
     'energysavingmin' : b"jq 00 01",
     'energysavingmed' : b"jq 00 02",
-    'energysavingmax' : b"jq 00 03"
+    'energysavingmax' : b"jq 00 03",
+    'volume10' : b"kf 00 16",
+    'volume15' : b"kf 00 21",
+    'volume20' : b"kf 00 32",
+    'volume25' : b"kf 00 37",
+    'volume30' : b"kf 00 48"
 }
 actual_codes['LK450_etc'] = common_codes.copy()
 actual_codes['LK450_etc'].update({
